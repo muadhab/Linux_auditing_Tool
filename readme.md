@@ -21,3 +21,12 @@ before executing run this ommand in your folder
  - ansible-playbook -i inventory.ini redhat_exec.yml
  - ansible-playbook -i inventory.ini lynis_redhat_exec.yml
  - ansible-playbook -i inventory.ini reverse_copy_redhat_exec.yml
+
+![image](https://github.com/user-attachments/assets/37c286ba-9ae9-4286-9d0d-aee27f457ece)
+
+![image](https://github.com/user-attachments/assets/0d1789a2-7544-4318-8c50-71c7cd7423b1)
+
+![image](https://github.com/user-attachments/assets/bc8df564-9ce5-4fe0-b35e-de51773ba002)
+
+
+
