@@ -1,0 +1,17 @@
+---
+- name: Execute redhat.sh on remote host
+  hosts: redhat  # This will apply to all hosts in the inventory
+  tasks:
+    - name: Execute redhat.sh
+      command: /data/redhat.sh  # Ensure this is the correct path to your script
+      register: ubuntu_result  # Register output for potential debugging
+
+    - name: Display redhat.sh output
+      debug:
+        var: redhat_result.stdout
+
+    - name: Display redhat.sh error output
+      debug:
+        var: redhat_result.stderr
+
+

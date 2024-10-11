@@ -1,0 +1,17 @@
+---
+- name: Execute reverse_copy_ubuntu.sh on remote host
+  hosts: VM2  # This will apply to all hosts in the inventory
+  become: yes
+  tasks:
+    - name: Execute reverse_copy_ubuntu.sh
+      command: /audit/scripts/reverse_copy_ubuntu.sh  # Ensure this is the correct path to your script
+      register: reverse_copy_result  # Register output for potential debugging
+
+    - name: Display reverse_copy_ubuntu.sh output
+      debug:
+        var: reverse_copy_result.stdout
+
+    - name: Display reverse_copy_ubuntu.sh error output
+      debug:
+        var: reverse_copy_result.stderr
+

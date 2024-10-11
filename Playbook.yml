@@ -1,0 +1,23 @@
+---
+- name: Deploy shell scripts on remote host
+  hosts: my_hosts  # This will apply to all hosts in the inventory
+  tasks:
+    - name: Copy lynis_ubuntu.sh to remote host
+      copy:
+        src: lynis_ubuntu.sh  # Path to the script on your Ansible control machine
+        dest: /data/lynis_ubuntu.sh  # Path where the script will be stored on the remote host
+        mode: '0755'  # Make the script executable
+
+    - name: Copy ubuntu.sh to remote host
+      copy:
+        src: ubuntu.sh  # Path to the script on your Ansible control machine
+        dest: /data/ubuntu.sh  # Path where the script will be stored on the remote host
+        mode: '0755'  # Make the script executable
+    
+    - name: Copy reverse_copy.sh to remote host
+      copy:
+        src: reverse_copy_ubuntu.sh  # Path to the script on your Ansible control machine
+        dest: /data/reverse_copy_ubuntu.sh  # Path where the script will be stored on the remote host
+        mode: '0755'  # Make the script executable
+
+    

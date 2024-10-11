@@ -1,0 +1,16 @@
+---
+- name: Execute lynis_ubuntu.sh on remote host
+  hosts: all  # This will apply to all hosts in the inventory
+  tasks:
+    - name: Execute lynis_ubuntu.sh
+      command: /data/lynis_ubuntu.sh  # Ensure this is the correct path to your script
+      register: lynis_result  # Register output for potential debugging
+
+    - name: Display lynis_ubuntu.sh output
+      debug:
+        var: lynis_result.stdout
+
+    - name: Display lynis_ubuntu.sh error output
+      debug:
+        var: lynis_result.stderr
+
